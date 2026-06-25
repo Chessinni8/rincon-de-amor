@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command *)",
+      "PowerShell(winget install *)",
+      "Skill(run)",
+      "Bash(ls -la .claude/skills)",
+      "Bash(which chromium-cli *)",
+      "Bash(which playwright *)",
+      "Bash(where chromium-cli *)",
+      "Bash(npm ls *)",
+      "Bash(npx --yes chromium-cli --help)",
+      "Bash(curl -s http://localhost:8000/css/styles.css)"
+    ]
+  }
+}

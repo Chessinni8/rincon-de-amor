@@ -1,0 +1,190 @@
+/* ============================================
+   NAVBAR EN SUBPÁGINAS
+============================================ */
+.navbar.scrolled .brand-main { color: var(--dark); }
+.navbar.scrolled .brand-sub  { color: var(--text-mid); }
+.navbar.scrolled .nav-links a { color: var(--text-mid); }
+.navbar.scrolled .nav-toggle span { background: var(--dark); }
+
+.nav-brand a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+/* ============================================
+   HERO CATEGORÍA
+============================================ */
+.cat-hero {
+  position: relative;
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #7B2D42 0%, #3A1520 100%);
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+.cat-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.6) saturate(0.85);
+}
+
+.cat-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(58,21,32,0.6) 0%, rgba(78,26,42,0.4) 100%);
+}
+
+.cat-hero-content {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  padding: 6rem 1.5rem;
+}
+
+.cat-hero-icon {
+  font-size: 2rem;
+  color: var(--pink-light);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.cat-hero-content h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+  color: var(--white);
+}
+
+.cat-hero-content h1 em {
+  font-style: italic;
+  color: var(--pink-light);
+}
+
+.cat-hero-content p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ============================================
+   GRID DE TARJETAS
+============================================ */
+.cat-section {
+  padding: 5rem 4%;
+  background: #F0D0D8;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.8rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cat-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(58, 21, 32, 0.2);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+  aspect-ratio: 4/5;
+  cursor: pointer;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(58, 21, 32, 0.35);
+}
+
+.cat-card-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cat-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cat-card:hover .cat-card-img img {
+  transform: scale(1.06);
+}
+
+.cat-card-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(58, 21, 32, 0);
+  transition: background 0.4s ease;
+}
+
+.cat-card:hover .cat-card-body {
+  background: rgba(58, 21, 32, 0.65);
+}
+
+.btn-hazlo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  background: #25D366;
+  color: var(--white);
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.cat-card:hover .btn-hazlo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-hazlo:hover {
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.55);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .cat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+}
