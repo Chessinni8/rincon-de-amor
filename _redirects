@@ -1,0 +1,44 @@
+# Rutas cortas para las fotos del catalogo
+# (rewrite 200: mantiene la URL corta visible y sirve la imagen real)
+
+# Anchetas
+/f/a1    /images/categorias/anchetas/foto1.jpeg     200
+/f/a2    /images/categorias/anchetas/foto2.jpeg     200
+/f/a3    /images/categorias/anchetas/foto3.jpeg     200
+/f/a4    /images/categorias/anchetas/foto4.jpeg     200
+/f/a5    /images/categorias/anchetas/foto5.jpeg     200
+/f/a6    /images/categorias/anchetas/foto6.jpeg     200
+/f/a7    /images/categorias/anchetas/foto7.jpeg     200
+/f/a8    /images/categorias/anchetas/foto8.jpeg     200
+/f/a9    /images/categorias/anchetas/foto9.jpeg     200
+/f/a10   /images/categorias/anchetas/foto10.jpeg    200
+/f/a11   /images/categorias/anchetas/foto11.jpeg    200
+/f/a12   /images/categorias/anchetas/foto12.jpeg    200
+
+# Arreglos
+/f/r1    /images/categorias/arreglos/foto1.jpeg     200
+/f/r2    /images/categorias/arreglos/foto2.jpeg     200
+/f/r3    /images/categorias/arreglos/foto3.jpeg     200
+/f/r4    /images/categorias/arreglos/foto4.jpeg     200
+/f/r5    /images/categorias/arreglos/foto5.jpeg     200
+/f/r6    /images/categorias/arreglos/foto6.jpeg     200
+/f/r7    /images/categorias/arreglos/foto7.jpeg     200
+/f/r8    /images/categorias/arreglos/foto8.jpeg     200
+/f/r9    /images/categorias/arreglos/foto9.jpeg     200
+/f/r10   /images/categorias/arreglos/foto10.jpeg    200
+/f/r11   /images/categorias/arreglos/foto11.jpeg    200
+/f/r12   /images/categorias/arreglos/foto12.jpeg    200
+
+# Desayunos
+/f/d1    /images/categorias/desayunos/foto1.jpeg    200
+/f/d2    /images/categorias/desayunos/foto2.jpeg    200
+/f/d3    /images/categorias/desayunos/foto3.jpeg    200
+/f/d4    /images/categorias/desayunos/foto4.jpeg    200
+/f/d5    /images/categorias/desayunos/foto5.jpeg    200
+/f/d6    /images/categorias/desayunos/foto6.jpeg    200
+/f/d7    /images/categorias/desayunos/foto7.jpeg    200
+/f/d8    /images/categorias/desayunos/foto8.jpeg    200
+/f/d9    /images/categorias/desayunos/foto9.jpeg    200
+/f/d10   /images/categorias/desayunos/foto10.jpeg   200
+/f/d11   /images/categorias/desayunos/foto11.jpeg   200
+/f/d12   /images/categorias/desayunos/foto12.jpeg   200
