@@ -585,6 +585,28 @@ a {
   .servicio-card {
     height: 320px;
   }
+
+  /* En móvil no hay hover: mostramos siempre el estado que en desktop
+     aparece al pasar el cursor, para indicar que las tarjetas son tocables */
+  .servicio-card-overlay {
+    background: rgba(58, 21, 32, 0.78);
+  }
+
+  .servicio-card-content i {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .servicio-card-desc {
+    max-height: 80px;
+    opacity: 1;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================================
