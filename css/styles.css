@@ -49,7 +49,47 @@ a {
 }
 
 /* ============================================
-   NAVBAR
+    WAVE DIVIDERS
+============================================ */
+.wave-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.hero,
+.nosotros,
+.galeria,
+.servicios,
+.contacto {
+  position: relative;
+  overflow: hidden;
+}
+
+.wave-to-nosotros svg path { fill: #F0D0D8; }
+.wave-to-galeria svg path  { fill: var(--dark); }
+.wave-to-servicios svg path { fill: #C27A8A; }
+.wave-to-contacto svg path  { fill: #7B2D42; }
+.wave-to-resenas svg path   { fill: var(--cream); }
+
+@media (max-width: 768px) {
+  .wave-divider svg {
+    height: 50px;
+  }
+}
+
+/* ============================================
+    NAVBAR
 ============================================ */
 .navbar {
   position: fixed;
@@ -614,7 +654,7 @@ a {
 ============================================ */
 .contacto {
   padding: 7rem 0;
-  background: linear-gradient(135deg, #7B2D42 0%, #4E1A2A 100%);
+  background: linear-gradient(to bottom, #7B2D42 0%, #4E1A2A 100%);
 }
 
 .contacto .section-tag {
