@@ -22,7 +22,7 @@
 - WhatsApp: 573136529189
 - Instagram: rincon.de.amor
 - Hosting: Netlify connected to GitHub
-- Repo: github.com/TuUsuario/rincon-de-amor
+- Repo: github.com/Chessinni8/rincon-de-amor
 - Subpages: categorias/arreglos.html, categorias/anchetas.html,
             categorias/desayunos.html
 - Main CSS: css/styles.css
