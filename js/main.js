@@ -34,3 +34,30 @@ document.addEventListener('click', (e) => {
     navLinks.classList.remove('open');
   }
 });
+
+// Parallax sutil en hero
+const heroImage = document.querySelector('.hero-image');
+const heroOverlay = document.querySelector('.hero-overlay');
+const catHeroImage = document.querySelector('.cat-hero-image');
+const catHeroOverlay = document.querySelector('.cat-hero-overlay');
+const activeHero = document.querySelector('.hero') || document.querySelector('.cat-hero');
+
+if (heroImage || catHeroImage) {
+  const targetImage = heroImage || catHeroImage;
+  const targetOverlay = heroOverlay || catHeroOverlay;
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const heroHeight = activeHero.offsetHeight;
+    
+    if (scrolled < heroHeight) {
+      const parallaxSpeed = 0.4;
+      targetImage.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+      
+      if (targetOverlay) {
+        const overlayOpacity = 0.45 + (scrolled / heroHeight) * 0.3;
+        targetOverlay.style.background = `linear-gradient(to bottom, rgba(58, 37, 48, ${overlayOpacity}) 0%, rgba(58, 37, 48, ${overlayOpacity - 0.2}) 50%, rgba(58, 37, 48, ${overlayOpacity + 0.1}) 100%)`;
+      }
+    }
+  }, { passive: true });
+}

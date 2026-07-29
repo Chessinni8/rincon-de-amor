@@ -1,5 +1,21 @@
 /* ============================================
-   NAVBAR EN SUBPÁGINAS
+    CAT-HERO — PARALLAX & WAVE
+============================================ */
+.cat-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-hero-image {
+  height: 120%;
+  will-change: transform;
+  top: 0;
+}
+
+.wave-to-cat-section svg path { fill: #F0D0D8; }
+
+/* ============================================
+    NAVBAR EN SUBPÁGINAS
 ============================================ */
 .navbar.scrolled .brand-main { color: var(--dark); }
 .navbar.scrolled .brand-sub  { color: var(--text-mid); }
@@ -24,7 +40,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #7B2D42 0%, #3A1520 100%);
+  background: linear-gradient(to bottom, #7B2D42 0%, #3A1520 100%);
   padding-top: 6rem;
   padding-bottom: 3rem;
 }
