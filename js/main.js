@@ -35,6 +35,25 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Intersection Observer — Scroll Reveal
+const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+if (revealElements.length > 0) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+}
+
 // Parallax sutil en hero
 const heroImage = document.querySelector('.hero-image');
 const heroOverlay = document.querySelector('.hero-overlay');
