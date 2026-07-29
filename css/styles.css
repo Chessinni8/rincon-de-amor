@@ -279,7 +279,23 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.85);
+  position: relative;
   transition: color var(--transition);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--terracota);
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .navbar.scrolled .nav-links a {
@@ -568,9 +584,9 @@ a {
 .galeria-item-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(58,37,48,0.6) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(58,37,48,0.7) 0%, transparent 50%);
   opacity: 0;
-  transition: opacity var(--transition);
+  transition: opacity 0.4s ease;
 }
 
 .galeria-item:hover .galeria-item-overlay {
@@ -937,11 +953,27 @@ a {
 .footer-links a {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.5);
+  position: relative;
   transition: color var(--transition);
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--pink-light);
+  transition: width 0.35s ease;
 }
 
 .footer-links a:hover {
   color: var(--pink-light);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
 }
 
 .footer-info {
@@ -1045,6 +1077,10 @@ a {
   .nav-links a {
     color: var(--text-mid);
     font-size: 1rem;
+  }
+
+  .nav-links a::after {
+    display: none;
   }
 
   .servicios-grid {
