@@ -103,7 +103,7 @@
 ============================================ */
 .cat-section {
   padding: 5rem 4%;
-  background: #F0D0D8;
+  background: linear-gradient(to bottom, #F0D0D8 0%, #EBC6CF 50%, #F0D0D8 100%);
 }
 
 .cat-grid {
