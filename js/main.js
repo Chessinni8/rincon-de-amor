@@ -1,3 +1,19 @@
+// Preloader
+const preloader = document.getElementById('preloader');
+if (preloader) {
+  if (sessionStorage.getItem('preloader-shown')) {
+    preloader.remove();
+  } else {
+    sessionStorage.setItem('preloader-shown', 'true');
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        preloader.classList.add('hide');
+        preloader.addEventListener('transitionend', () => preloader.remove());
+      }, 600);
+    });
+  }
+}
+
 // Navbar: cambiar estilo al hacer scroll
 const navbar = document.getElementById('navbar');
 
