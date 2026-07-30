@@ -77,6 +77,15 @@ const catHeroImage = document.querySelector('.cat-hero-image');
 const catHeroOverlay = document.querySelector('.cat-hero-overlay');
 const activeHero = document.querySelector('.hero') || document.querySelector('.cat-hero');
 
+// Hero image blur-up
+if (heroImage) {
+  if (heroImage.complete) {
+    heroImage.classList.add('loaded');
+  } else {
+    heroImage.addEventListener('load', () => heroImage.classList.add('loaded'));
+  }
+}
+
 if (heroImage || catHeroImage) {
   const targetImage = heroImage || catHeroImage;
   const targetOverlay = heroOverlay || catHeroOverlay;
@@ -95,6 +104,22 @@ if (heroImage || catHeroImage) {
       }
     }
   }, { passive: true });
+}
+
+// Back to top
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }
 
 // Lightbox galería
